@@ -1,0 +1,134 @@
+baseURL: "https://spromam.github.io/" 
+languageCode: 'en-us'  # http://www.rssboard.org/rss-language-codes
+DefaultContentLanguage: "en" # The default contentlanguage, see languages part.
+title: "Sylvain Procope-Mamert Homepage" # default title
+theme: "hugo-academia"
+canonifyURLs : true # if use absolute path.
+
+languages:
+  en:
+    languageName: ":uk:"
+    weight: 1
+    contentDir: content/en
+
+params:
+  author: "Sylvain Procope-Mamert"
+  author_bio: ""
+  since: "2024"
+  # icp: "网ICP备2023114514号"
+  avatar: "/images/profile.jpg"
+  favicon: "/images/favicon.ico"  # Please use .ico format
+  menu: # The navigation bar
+    About:
+        name: "About"
+        url: /
+        weight: 1
+    # Research:
+    #     name: "Research"
+    #     url: research/
+    #     weight: 3
+    # Publications:
+    #     name: "Publications"
+    #     url: "publications/"
+    #     weight: 2
+    Teaching:
+        name: "Teaching"
+        url: "teaching/"
+        weight: 4
+
+  # The default avatar if params.avatar not set.
+  loading_bg:
+    flink: /images/profile.png
+
+  # Social Links; 社交链接，不需要的链接直接注释掉
+  # Find icons here : https://fontawesome.com/icons/
+  # 可以通过 weight 调整显示顺序
+  # 图标调用 font-awesome 5.13
+  social:
+    enable: true
+    links:
+      Github: 
+        icon: fab fa-github 
+        url: https://github.com/spromam
+        weight: 1
+      # Telegram:
+      #   icon: fab fa-telegram
+      #   url: https://t.me/zzsqwq
+      #   weight: 2
+      # Envelope: #E-mail
+      #   icon: fas fa-envelope
+      #   url: mailto:trizsqwq@gmail.com
+      #   weight: 3
+      # RSS:
+      #   icon: fas fa-rss
+      #   url: "index.xml/"
+      #   weight: 4
+      # Weixin: 
+      #   icon: fab fa-weixin
+      #   url: 
+      # QQ: 
+      #   icon: fab fa-qq
+      #   url:
+      # Twitter: 
+      #   icon: fab fa-twitter
+      #   url: /
+      # Facebook: 
+      #   icon: fab fa-facebook-square
+      #   url:
+      # StackOverflow: 
+      #   icon: fab fa-stack-overflow
+      #   url:
+      # Linkedin: 
+      #   icon: fab fa-linkedin
+      #   url:
+      # Weibo: 
+      #   icon: fab fa-weibo
+      #   url:
+
+  # Additional social_links，额外添加自定义链接，可显示链接名称
+  # 可以通过 weight 更改顺序
+  e_social:
+    enable: true
+    links:
+      Email:
+        name: "sylvain.procope-mamert [at] inrae.fr"
+        icon: "fas fa-envelope"
+        weight: 3
+  #     Google Scholar:
+  #       name: Google Scholar
+  #       url:  "/"
+  #       icon: "fas fa-graduation-cap"
+  #       weight: 1
+  #     ORCID:
+  #       name: ORCID
+  #       url: "/"
+  #       icon: "fab fa-orcid"
+  #       weight: 2
+
+  # CV download link
+  # cv_dl:
+  #   enable: true
+  #   dir: /attaches/CV.pdf
+  #   description: Zs's CV
+
+  # Box-shadow
+  # display box-shadow on page or not
+  box_shadow:
+    enable: false
+
+  # CDN
+  # 根据需要自行添加js/css
+  # 自定义css可以直接写在user.styl中
+  CDN_USE:
+    css:
+      - /css/style.css
+      - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css # fontawesome 5
+    js:
+      - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
+      - https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js
+      - /js/main.js
+
+  security:
+    funcs:
+      - ^HUGO_
+      - ^WC_
